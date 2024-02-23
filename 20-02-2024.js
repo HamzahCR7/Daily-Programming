@@ -19,7 +19,7 @@ function missingNumbers(nums) {
     let vowels ='aeiouAEIOU';
     let count=0;
     for(let char of str) {
-      if(vowels.includes(str[char])){
+      if(vowels.includes(char)){
       count++;  
     }
   }
