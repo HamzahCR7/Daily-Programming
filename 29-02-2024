@@ -1,0 +1,33 @@
+//function to get day, month, year,hr,mins,sec,ms -start
+function getFullDate() {
+  let today = new Date();
+  let day = String(today.getDate()).padStart(2,0);
+  let month = String(today.getMonth()+1).padStart(2,0);
+  let year = today.getFullYear();
+  let hour = today.getHours();
+  let mins = today.getMinutes();
+  let sc = today.getSeconds();
+  let ms = today.getMilliseconds();
+  console.log(today)
+  console.log(`${day}:${month}:${year}:${hour}:${mins}:${sc}:${ms}`);
+}
+
+getFullDate();
+//function to get day, month, year,hr,mins,sec,ms - end
+//function to get day, month, year,hr,mins,sec,ms in IST - start
+function getISTzone() {
+  let utcDay = new Date();
+  let utcTime = utcDay.getTime();
+  let istOffset = 5.5*60*60*1000; // indian standard time is utc+5:30
+  let istDay = new Date(utcTime + istOffset);
+  console.log(istDay)
+  //now calculate time according to istOffset
+  let day = istDay.getDate();
+  let hours = istDay.getHours();
+  let mins = istDay.getMinutes();
+  console.log(day,hours,mins)
+  
+}
+
+getISTzone()
+//function to get day, month, year,hr,mins,sec,ms in IST - end
