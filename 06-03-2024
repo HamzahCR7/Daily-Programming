@@ -81,3 +81,18 @@ function factorsBwTwo(start,end) {
 
 factorsBwTwo(40,110)
 //find the greatest common factors bw two numbers -end
+
+//Find all prime factors for a number --start
+function findPrimeFactors(n) {
+  let divisor = 2;
+  while (n> 2) {
+    if(n% divisor == 0) {
+      console.log(divisor);
+      n = n/divisor;
+    } else {
+      divisor++;
+    }
+  }
+}
+findPrimeFactors(120)
+//Find all prime factors for a number --end
