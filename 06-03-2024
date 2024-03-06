@@ -50,3 +50,34 @@ function factorsBwTwo(start,end) {
 
 factorsBwTwo(40,110);
 //find the exact common factors bw two numbers - end
+
+//find the greatest common factors bw two numbers -start
+function factors(n) {
+  let fact = []
+for(let i =1; i<=n; i++) {
+  if(n%i == 0) {
+    fact.push(i)
+  }
+}
+return fact;
+}
+
+function factorsBwTwo(start,end) {
+  let result = {};
+  for (let i = start; i<=end; i++) {
+    result[i] = factors(i)
+  }
+  let first = result[start];
+  let second = result[end];
+  let final = [];
+  for(let k = 0; k< first.length; k++) {
+    if(second.includes(first[k])) {
+      final.push(first[k])
+    }
+  }
+  console.log(Math.max(...final))
+ 
+}
+
+factorsBwTwo(40,110)
+//find the greatest common factors bw two numbers -end
