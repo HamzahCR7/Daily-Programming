@@ -1,0 +1,21 @@
+//All factors between two numbers --start
+function factors(n) {
+  let fact = []
+for(let i =1; i<=n; i++) {
+  if(n%i == 0) {
+    fact.push(i)
+  }
+}
+return fact;
+}
+
+function factorsBwTwo(start,end) {
+  let result = {};
+  for (let i = start; i<=end; i++) {
+    result[i] = factors(i)
+  }
+  console.log(result)
+}
+
+factorsBwTwo(10,25);
+//All factors between two numbers --end
